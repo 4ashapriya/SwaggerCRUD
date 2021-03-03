@@ -89,13 +89,13 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('app.backends.JWTAuthentication',)
 }
 
-SWAGGER_SETTINGS={
+SWAGGER_SETTINGS= {
     'SECURITY_DEFINITIONS': {
-        "Auth Token eg [Bearer (JWT)]":{
-            "type": "apikey",
-            "name":"Authorization",
-            "in":"header",
-        }
+        'Auth Token eg [Bearer (JWT)]': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+ }
     }
 }
 
@@ -131,7 +131,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-JWT_SECRET_KEY= os.environ.get('JWT_SECRET_KEY')
+JWT_SECRET_KEY= 'JWT_SECRET_KEY'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
